@@ -462,9 +462,9 @@ If rate limits are exceeded, the API returns:
 
 Webhooks notify clients of changes in real time.
 
-- User Enrolled: POST /webhooks/enrollment
-- Course Published: POST /webhooks/course_published
-- Assessment Graded: POST /webhooks/assessment_graded
+- User Enrolled: ```POST /webhooks/enrollment```
+- Course Published: ```POST /webhooks/course_published```
+- Assessment Graded: ```POST /webhooks/assessment_graded```
 
 <h2>7. Conclusion</h2>
 
