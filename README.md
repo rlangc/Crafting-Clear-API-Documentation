@@ -6,21 +6,17 @@ Last Updated: January 31, 2025
 
 Author: Ryan Lang
 
-<h2></h2>
-
-<h3>1. Introduction</h3>
+<h2>1. Introduction</h2
 
 The Learning Management System (LMS) API provides a robust, RESTful interface that allows developers to integrate LMS functionalities into external applications. This API enables programmatic access to courses, users, enrollments, assessments, reporting, and other critical LMS features.
 
 This documentation outlines API endpoints, authentication mechanisms, request/response formats, error handling, and best practices to help developers efficiently interact with the LMS API.
 
-<h2></h2>
-  
-<h3>2. Authentication</h3>
+<h2>2. Authentication</h2>
 
 The LMS API uses OAuth 2.0 for secure authentication. Every request must include a Bearer Token in the header.
 
-<h4>2.1 Obtaining an Access Token</h4>
+<h3>2.1 Obtaining an Access Token</h3>
 
 ```
 
@@ -61,21 +57,34 @@ Response:
 ```
 
 Note: The access token expires in 1 hour. Refresh the token before expiry.
-3. Endpoints
-3.1 User Management
-3.1.1 Get User Information
+
+<h2>3. Endpoints</h2>
+
+<h3>3.1 User Management</h3>
+
+<h4>3.1.1 Get User Information</h4>
+
+```
 
 Endpoint:
 
 GET /users/{user_id}
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token"
 }
 
+```
+
 Response:
+
+```
 
 {
   "id": 1234,
@@ -86,20 +95,32 @@ Response:
   "status": "active"
 }
 
-3.1.2 Create a New User
+```
+
+<h4>3.1.2 Create a New User</h4>
+
+```
 
 Endpoint:
 
 POST /users
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token",
   "Content-Type": "application/json"
 }
 
+```
+
 Request Body:
+
+```
 
 {
   "first_name": "Jane",
@@ -109,27 +130,44 @@ Request Body:
   "role": "instructor"
 }
 
+```
+
 Response:
+
+```
 
 {
   "id": 5678,
   "message": "User successfully created."
 }
 
-3.2 Course Management
-3.2.1 Get All Courses
+```
+
+<h3>3.2 Course Management</h3>
+
+<h4>3.2.1 Get All Courses</h4>
 
 Endpoint:
 
+```
+
 GET /courses
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token"
 }
 
+```
+
 Response:
+
+```
 
 [
   {
@@ -146,20 +184,32 @@ Response:
   }
 ]
 
-3.2.2 Create a New Course
+
+
+<h4>3.2.2 Create a New Course</h4>
 
 Endpoint:
 
+```
+
 POST /courses
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token",
   "Content-Type": "application/json"
 }
 
+```
+
 Request Body:
+
+```
 
 {
   "title": "Cloud Computing Fundamentals",
@@ -167,14 +217,23 @@ Request Body:
   "instructor_id": 5678
 }
 
+```
+
 Response:
+
+```
 
 {
   "id": 103,
   "message": "Course successfully created."
 }
 
-3.3 Enrollment Management
+```
+
+<h3>3.3 Enrollment Management</h3>
+
+<h4></h4>
+
 3.3.1 Enroll a Student in a Course
 
 Endpoint:
