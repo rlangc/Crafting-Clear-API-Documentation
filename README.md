@@ -434,12 +434,13 @@ Response:
 
 All error responses follow the standard HTTP status codes with a JSON error object.
 
-HTTP Status Code	Meaning	Example Message
-400 Bad Request	Invalid input	"message": "Invalid course ID"
-401 Unauthorized	Authentication failed	"message": "Invalid token"
-403 Forbidden	No permission to access	"message": "Access denied"
-404 Not Found	Resource not found	"message": "User not found"
-500 Internal Error	Server-side issue	"message": "Unexpected error"
+| HTTP Status Code | Meaning | Example Message |
+|----------|----------|----------|
+| 400 Bad Request    | Invalid input   | ```"message": "Invalid course ID"```   |
+| 401 Unauthorized	   | Authentication failed   | ```"message": "Invalid token"```   |
+| 403 Forbidden   | No permission to access   | ```"message": "Access denied"```   |
+| 404 Not Found   | Resource not found   | ```"message": "User not found"```   |
+| 500 Internal Error   | Server-side issue   | ```"message": "Unexpected error"```   |
 
 <h2>5. Rate Limiting</h2>
 
