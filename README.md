@@ -18,9 +18,9 @@ The LMS API uses OAuth 2.0 for secure authentication. Every request must include
 
 <h3>2.1 Obtaining an Access Token</h3>
 
-```
-
 Endpoint:
+
+```
 
 POST /auth/token
 
@@ -64,9 +64,9 @@ Note: The access token expires in 1 hour. Refresh the token before expiry.
 
 <h4>3.1.1 Get User Information</h4>
 
-```
-
 Endpoint:
+
+```
 
 GET /users/{user_id}
 
@@ -97,11 +97,12 @@ Response:
 
 ```
 
+
 <h4>3.1.2 Create a New User</h4>
 
-```
-
 Endpoint:
+
+```
 
 POST /users
 
@@ -142,6 +143,7 @@ Response:
 }
 
 ```
+
 
 <h3>3.2 Course Management</h3>
 
@@ -184,7 +186,7 @@ Response:
   }
 ]
 
-
+```
 
 <h4>3.2.2 Create a New Course</h4>
 
@@ -232,47 +234,71 @@ Response:
 
 <h3>3.3 Enrollment Management</h3>
 
-<h4></h4>
-
-3.3.1 Enroll a Student in a Course
+<h4>3.3.1 Enroll a Student in a Course</h4>
 
 Endpoint:
 
+```
+
 POST /enrollments
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token",
   "Content-Type": "application/json"
 }
 
+```
+
 Request Body:
+
+```
 
 {
   "user_id": 1234,
   "course_id": 101
 }
 
+```
+
 Response:
+
+```
 
 {
   "message": "User successfully enrolled in course."
 }
 
-3.3.2 Get a User's Enrollments
+```
+
+<h4>3.3.2 Get a User's Enrollments</h4>
 
 Endpoint:
 
+```
+
 GET /users/{user_id}/enrollments
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token"
 }
 
+```
+
 Response:
+
+```
 
 [
   {
@@ -282,20 +308,33 @@ Response:
   }
 ]
 
-3.4 Assessment Management
-3.4.1 Get Assessments for a Course
+```
+
+<h3>3.4 Assessment Management</h3>
+
+<h4>3.4.1 Get Assessments for a Course</h4>
 
 Endpoint:
 
+```
+
 GET /courses/{course_id}/assessments
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token"
 }
 
+```
+
 Response:
+
+```
 
 [
   {
@@ -306,20 +345,32 @@ Response:
   }
 ]
 
-3.4.2 Submit an Assessment
+```
+
+<h4>3.4.2 Submit an Assessment</h4>
 
 Endpoint:
 
+```
+
 POST /assessments/{assessment_id}/submissions
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token",
   "Content-Type": "application/json"
 }
 
+```
+
 Request Body:
+
+```
 
 {
   "user_id": 1234,
@@ -329,27 +380,44 @@ Request Body:
   }
 }
 
+```
+
 Response:
+
+```
 
 {
   "submission_id": 5555,
   "score": 85
 }
 
-3.5 Reporting
-3.5.1 Get Course Completion Report
+```
+
+<h3>3.5 Reporting</h3>
+
+<h4>3.5.1 Get Course Completion Report</h4>
 
 Endpoint:
 
+```
+
 GET /reports/completion?course_id=101
 
+```
+
 Headers:
+
+```
 
 {
   "Authorization": "Bearer your_access_token"
 }
 
+```
+
 Response:
+
+```
 
 [
   {
@@ -360,36 +428,48 @@ Response:
   }
 ]
 
-4. Error Handling
+```
+
+<h2>4. Error Handling</h2>
 
 All error responses follow the standard HTTP status codes with a JSON error object.
+
 HTTP Status Code	Meaning	Example Message
 400 Bad Request	Invalid input	"message": "Invalid course ID"
 401 Unauthorized	Authentication failed	"message": "Invalid token"
 403 Forbidden	No permission to access	"message": "Access denied"
 404 Not Found	Resource not found	"message": "User not found"
 500 Internal Error	Server-side issue	"message": "Unexpected error"
-5. Rate Limiting
+
+<h2>5. Rate Limiting</h2>
 
 To ensure fair usage, the LMS API enforces rate limits:
 
-    Standard Users: 100 requests per minute
-    Premium Users: 500 requests per minute
+- Standard Users: 100 requests per minute
+- Premium Users: 500 requests per minute
 
 If rate limits are exceeded, the API returns:
+
+```
 
 {
   "message": "Rate limit exceeded. Try again later."
 }
 
-6. Webhooks
+```
+
+<h2>6. Webhooks</h2>
 
 Webhooks notify clients of changes in real time.
 
-    User Enrolled: POST /webhooks/enrollment
-    Course Published: POST /webhooks/course_published
-    Assessment Graded: POST /webhooks/assessment_graded
+- User Enrolled: POST /webhooks/enrollment
+- Course Published: POST /webhooks/course_published
+- Assessment Graded: POST /webhooks/assessment_graded
 
-7. Conclusion
+<h2>7. Conclusion</h2>
 
 This API provides a comprehensive way to integrate LMS functionalities into your applications. For further support, contact our developer support team.
+
+<h2></h2>
+<p align="center">
+  <a href="https://github.com/rlangc/Test_RCL.git"><b>Return to Home</b></a>
