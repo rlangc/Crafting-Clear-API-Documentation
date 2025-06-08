@@ -1,15 +1,6 @@
-# API Writing Repository – Description
+# API Writing Repository
 
-Explore a comprehensive collection of materials focused on the craft of API writing and developer documentation. This repository showcases a blend of academic foundations, practical documentation projects, and professional writing samples that support the planning, creation, and delivery of effective API content.
-
-Artifacts include:
-
-- Detailed reference documentation  
-- Instructional guides and walkthroughs  
-- Style guides and formatting standards  
-- Tool-based implementations using Swagger, Postman, and Markdown  
-
-Whether you're exploring best practices, reviewing full documentation sets, or examining technical writing strategies, each resource is designed to highlight how clear, consistent, and user-centered documentation supports integration, usability, and developer success.
+Explore a comprehensive collection of materials focused on the craft of API writing and developer documentation. This repository features a mix of academic assignments, hands-on documentation projects, and professional writing samples that illustrate how to plan, structure, and deliver effective API content. Included are detailed reference documents, instructional guides, style manuals, and tool-based implementations using platforms like Swagger, Postman, and Markdown. Each item demonstrates key principles of clarity, consistency, and usability, showing how well-crafted documentation can enhance developer experience and support successful API integration.
 
 <h2></h2>
 <p align="center">
