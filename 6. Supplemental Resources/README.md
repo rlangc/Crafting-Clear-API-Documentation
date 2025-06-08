@@ -1,0 +1,1 @@
+A curated set of external resources to support and enhance your API writing practice. Includes industry whitepapers, style guides, tooling comparisons, and recommended books on technical writing and developer experience.
