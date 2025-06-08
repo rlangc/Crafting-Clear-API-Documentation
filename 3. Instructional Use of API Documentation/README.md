@@ -1,0 +1,1 @@
+This section provides practical, instructional guidance for writing and teaching API documentation. These resources include annotated walkthroughs, step-by-step tutorials, and strategies for making developer documentation more effective in learning environments.
