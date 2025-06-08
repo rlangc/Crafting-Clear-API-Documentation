@@ -1,0 +1,1 @@
+Explore academic assignments that emphasize technical communication, software API integration, and structured documentation design. These pieces reflect the theoretical foundation and applied strategies gained through coursework in instructional design, software usability, and documentation principles.
